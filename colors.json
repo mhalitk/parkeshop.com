@@ -1,0 +1,14 @@
+{
+    "primary_colors": {
+        "dark_wood_brown": "#6F4E37",
+        "warm_beige": "#E6D4B8"
+    },
+    "accent_colors": {
+        "forest_green": "#4F7942",
+        "soft_amber": "#FFC97E"
+    },
+    "neutral_colors": {
+        "rich_charcoal": "#333333",
+        "off_white": "#F9F8F4"
+    }
+}
