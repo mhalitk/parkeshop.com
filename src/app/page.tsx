@@ -22,18 +22,18 @@ const categories = [
     href: '/b/bakim-temizlik',
     tags: ['temizlik', 'bakım', 'koruma', 'ürünler'],
   },
-  {
-    title: 'Trendler & İlham',
-    description: 'En son parke trendlerini keşfedin ve eviniz için ilham alın.',
-    href: '/b/trendler-ilham',
-    tags: ['trendler', 'ilham', 'tasarım', 'modern'],
-  },
-  {
-    title: 'Fiyat & Satın Alma Rehberi',
-    description: 'Parke maliyetleri ve farklı markalar hakkında bilgi edinin.',
-    href: '/b/fiyat-satina-rehberi',
-    tags: ['fiyatlar', 'markalar', 'karşılaştırma', 'bütçe'],
-  },
+  // {
+  //   title: 'Trendler & İlham',
+  //   description: 'En son parke trendlerini keşfedin ve eviniz için ilham alın.',
+  //   href: '/b/trendler-ilham',
+  //   tags: ['trendler', 'ilham', 'tasarım', 'modern'],
+  // },
+  // {
+  //   title: 'Fiyat & Satın Alma Rehberi',
+  //   description: 'Parke maliyetleri ve farklı markalar hakkında bilgi edinin.',
+  //   href: '/b/fiyat-satina-rehberi',
+  //   tags: ['fiyatlar', 'markalar', 'karşılaştırma', 'bütçe'],
+  // },
 ];
 
 const featuredArticles = [

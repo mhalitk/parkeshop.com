@@ -30,11 +30,11 @@ body {
   }
 
   h2 {
-    @apply text-3xl sm:text-4xl mt-6 mb-3;
+    @apply text-2xl sm:text-4xl mt-6 mb-3;
   }
 
   h3 {
-    @apply text-2xl sm:text-3xl mt-5 mb-2;
+    @apply text-xl sm:text-3xl mt-5 mb-2;
   }
 
   h4 {

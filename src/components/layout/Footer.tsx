@@ -47,7 +47,7 @@ const Footer: React.FC = () => {
                   Bakım & Temizlik
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/b/trendler-ilham" className="text-primary-light hover:text-accent-amber">
                   Trendler & İlham
                 </Link>
@@ -56,7 +56,7 @@ const Footer: React.FC = () => {
                 <Link href="/b/fiyat-satina-rehberi" className="text-primary-light hover:text-accent-amber">
                   Fiyat & Satın Alma Rehberi
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
           

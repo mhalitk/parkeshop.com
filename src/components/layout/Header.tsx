@@ -39,12 +39,12 @@ const Header: React.FC = () => {
             <Link href="/b/bakim-temizlik" className="text-neutral-dark hover:text-accent-green">
               Bakım & Temizlik
             </Link>
-            <Link href="/b/trendler-ilham" className="text-neutral-dark hover:text-accent-green">
+            {/* <Link href="/b/trendler-ilham" className="text-neutral-dark hover:text-accent-green">
               Trendler & İlham
             </Link>
             <Link href="/b/fiyat-satinalma-rehberi" className="text-neutral-dark hover:text-accent-green">
               Fiyat & Satın Alma Rehberi
-            </Link>
+            </Link> */}
           </div>
         </div>
       </nav>
