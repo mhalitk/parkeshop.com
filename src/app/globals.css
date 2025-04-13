@@ -12,6 +12,124 @@ body {
   background: rgb(var(--background-rgb));
 }
 
+@layer base {
+  html {
+    @apply antialiased bg-white;
+  }
+
+  body {
+    @apply min-h-screen;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+
+  h1 {
+    @apply text-4xl sm:text-5xl mt-8 mb-4;
+  }
+
+  h2 {
+    @apply text-3xl sm:text-4xl mt-6 mb-3;
+  }
+
+  h3 {
+    @apply text-2xl sm:text-3xl mt-5 mb-2;
+  }
+
+  h4 {
+    @apply text-xl sm:text-2xl mt-4 mb-2;
+  }
+
+  h5 {
+    @apply text-lg sm:text-xl mt-4 mb-2;
+  }
+
+  h6 {
+    @apply text-base sm:text-lg mt-4 mb-2;
+  }
+
+  p {
+    @apply text-base leading-relaxed my-4;
+  }
+
+  a {
+    @apply transition-colors duration-200;
+  }
+
+  ul, ol {
+    @apply my-4 pl-6;
+  }
+
+  ul {
+    @apply list-disc;
+  }
+
+  ol {
+    @apply list-decimal;
+  }
+
+  li {
+    @apply my-2;
+  }
+
+  blockquote {
+    @apply border-l-4 pl-4 italic my-6;
+  }
+
+  code {
+    @apply px-1 py-0.5 rounded text-sm font-mono;
+  }
+
+  pre {
+    @apply p-4 rounded-lg overflow-x-auto my-6;
+  }
+
+  img {
+    @apply max-w-full h-auto rounded-lg;
+  }
+
+  hr {
+    @apply my-8;
+  }
+
+  table {
+    @apply w-full border-collapse my-6;
+  }
+
+  th, td {
+    @apply border px-4 py-2;
+  }
+
+  th {
+    @apply font-semibold;
+  }
+
+  /* Additional spacing for nested elements */
+  p + p {
+    @apply mt-4;
+  }
+
+  h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
+    @apply mt-2;
+  }
+
+  /* Spacing for lists within paragraphs */
+  p + ul, p + ol {
+    @apply mt-4;
+  }
+
+  /* Spacing for blockquotes within paragraphs */
+  p + blockquote {
+    @apply mt-4;
+  }
+
+  /* Spacing for code blocks within paragraphs */
+  p + pre {
+    @apply mt-4;
+  }
+}
+
 @layer components {
   .container {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;

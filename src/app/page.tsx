@@ -7,31 +7,31 @@ const categories = [
   {
     title: 'Parke Çeşitleri',
     description: 'Farklı parke stillerini, malzemelerini ve görünümlerini keşfedin.',
-    href: '/types',
+    href: '/b/parke-cesitleri',
     tags: ['meşe', 'laminat', 'masif', 'desenler'],
   },
   {
     title: 'Kurulum & DIY',
     description: 'Parke döşemeyi öğrenin veya profesyonel kurulum için hazırlanın.',
-    href: '/installation',
+    href: '/b/kurulum-diy',
     tags: ['DIY', 'kurulum', 'aletler', 'hazırlık'],
   },
   {
     title: 'Bakım & Temizlik',
     description: 'Parke zeminlerinizi düzgün bakım ile güzel tutun.',
-    href: '/maintenance',
+    href: '/b/bakim-temizlik',
     tags: ['temizlik', 'bakım', 'koruma', 'ürünler'],
   },
   {
     title: 'Trendler & İlham',
     description: 'En son parke trendlerini keşfedin ve eviniz için ilham alın.',
-    href: '/trends',
+    href: '/b/trendler-ilham',
     tags: ['trendler', 'ilham', 'tasarım', 'modern'],
   },
   {
     title: 'Fiyat & Satın Alma Rehberi',
     description: 'Parke maliyetleri ve farklı markalar hakkında bilgi edinin.',
-    href: '/buying-guide',
+    href: '/b/fiyat-satina-rehberi',
     tags: ['fiyatlar', 'markalar', 'karşılaştırma', 'bütçe'],
   },
 ];

@@ -30,19 +30,19 @@ const Header: React.FC = () => {
           </Link>
           
           <div className="hidden md:flex space-x-8">
-            <Link href="/types" className="text-neutral-dark hover:text-accent-green">
+            <Link href="/b/parke-cesitleri" className="text-neutral-dark hover:text-accent-green">
               Parke Çeşitleri
             </Link>
-            <Link href="/installation" className="text-neutral-dark hover:text-accent-green">
+            <Link href="/b/kurulum-diy" className="text-neutral-dark hover:text-accent-green">
               Kurulum & DIY
             </Link>
-            <Link href="/maintenance" className="text-neutral-dark hover:text-accent-green">
+            <Link href="/b/bakim-temizlik" className="text-neutral-dark hover:text-accent-green">
               Bakım & Temizlik
             </Link>
-            <Link href="/trends" className="text-neutral-dark hover:text-accent-green">
+            <Link href="/b/trendler-ilham" className="text-neutral-dark hover:text-accent-green">
               Trendler & İlham
             </Link>
-            <Link href="/buying-guide" className="text-neutral-dark hover:text-accent-green">
+            <Link href="/b/fiyat-satinalma-rehberi" className="text-neutral-dark hover:text-accent-green">
               Fiyat & Satın Alma Rehberi
             </Link>
           </div>
