@@ -57,7 +57,7 @@ export default function Home() {
       <Hero 
         title="Parke Dünyasına Hoş Geldiniz"
         description="Zemin ihtiyaçlarınız için en iyi kararları vermenize yardımcı olacak stiller, kurulum ipuçları, bakım püf noktaları ve daha fazlasını keşfedin."
-        showButton={true}
+        // showButton={true}
       />
 
       <div className="container py-12">
@@ -77,14 +77,14 @@ export default function Home() {
           </div>
         </section>
 
-        <section>
+        {/* <section>
           <h2 className="text-3xl font-semibold text-gray-800 mb-8">Öne Çıkan Makaleler</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {featuredArticles.map((article) => (
               <Card key={article.href} {...article} />
             ))}
           </div>
-        </section>
+        </section> */}
       </div>
     </Layout>
   );
