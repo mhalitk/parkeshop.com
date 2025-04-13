@@ -1,8 +1,42 @@
+'use client';
+
 import React from 'react';
 import Layout from '@/components/layout/Layout';
 import Hero from '@/components/Hero';
 
 export default function ContactPage() {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      name: formData.get('name'),
+      phone: formData.get('phone'),
+      subject: formData.get('subject'),
+      message: formData.get('message'),
+    };
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
+
+      // Show success message or redirect
+      alert('Message sent successfully!');
+    } catch (error) {
+      console.error('Error:', error);
+      alert('Failed to send message. Please try again.');
+    }
+  };
+
   return (
     <Layout>
       <Hero 
@@ -11,13 +45,13 @@ export default function ContactPage() {
       />
       <section className="container py-12">
         <div className="prose prose-lg">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            <div className="bg-gray-50 p-6 rounded-lg">
+          <div className="grid grid-cols-1 md:grid-cols-1 gap-8 mb-12">
+            {/* <div className="bg-gray-50 p-6 rounded-lg">
               <h2 className="text-2xl font-semibold text-gray-800 mb-4">Bize Ulaşın</h2>
               <p className="text-gray-600 mb-4">
                 Aşağıdaki formu doldurun, en kısa sürede size dönüş yapacağız.
               </p>
-              <form className="space-y-4">
+              <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
                     Ad Soyad
@@ -26,17 +60,19 @@ export default function ContactPage() {
                     type="text"
                     id="name"
                     name="name"
+                    required
                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                    E-posta
+                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
+                    Telefon
                   </label>
                   <input
-                    type="email"
-                    id="email"
-                    name="email"
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    required
                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                   />
                 </div>
@@ -48,6 +84,7 @@ export default function ContactPage() {
                     type="text"
                     id="subject"
                     name="subject"
+                    required
                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                   />
                 </div>
@@ -59,6 +96,7 @@ export default function ContactPage() {
                     id="message"
                     name="message"
                     rows={4}
+                    required
                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                   ></textarea>
                 </div>
@@ -69,10 +107,10 @@ export default function ContactPage() {
                   Mesaj Gönder
                 </button>
               </form>
-            </div>
+            </div> */}
 
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h2 className="text-2xl font-semibold text-gray-800 mb-4">Bize Ulaşmanın Diğer Yolları</h2>
+            <div className="bg-gray-50 p-12 rounded-lg">
+              <h2 className="text-2xl font-semibold text-gray-800 mb-4">Bize Ulaşmanın Yolları</h2>
               <div className="space-y-4">
                 <div>
                   <h3 className="text-lg font-medium text-gray-800">İşbirliği İçin</h3>
@@ -90,6 +128,7 @@ export default function ContactPage() {
                     <a href="mailto:basin@parkeshop.com" className="text-blue-600 hover:text-blue-800">
                       basin@parkeshop.com
                     </a>
+                    {' '}
                     adresinden ulaşabilir
                   </p>
                 </div>
