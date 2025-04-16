@@ -62,13 +62,15 @@ async function getNextUnusedTitle(category: string) {
 }
 
 async function generateBlog(title: string, category: string) {
-    const prompt = `Write a blog post in Turkish for this title: "${title}"
+    const prompt = `Write a 2000-2500 word blog post in Turkish for this title: "${title}"
 
 This is a blog post for parkeshop.com, a knowledge base for parquet products in Turkey.
 
+Parkeshop doesn't sell parquet products, but it's a blog for parquet enthusiasts.
+
 Place internal links to home page (https://parkeshop.com), and contact page (https://parkeshop.com/contact) if relevant.
 
-The blog should be between 2000-2500 words.
+The blog should be between 2000 and 2500 words.
 
 The blog text will be used in website, so it should be SEO-friendly and contain relevant keywords.
 
