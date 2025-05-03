@@ -1,5 +1,5 @@
 ---
-title: Kendi Kendine Parke Döşemek: Yeni Başlayanlar İçin Rehber
+title: "Kendi Kendine Parke Döşemek: Yeni Başlayanlar İçin Rehber"
 slug: kendi-kendine-parke-dosemek-yeni-baslayanlar-i-cin-rehber
 excerpt: Kendi evinizde parke döşeme konusunda bir başlangıç yapmak istiyorsanız, bu rehber tam size göre. Adım adım talimatları ve kullanışlı ipuçlarıyla, kendi parke döşeme projenizi başlatmanız kolaylaşacak.
 date: 2025-04-19

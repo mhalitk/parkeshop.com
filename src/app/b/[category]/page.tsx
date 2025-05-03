@@ -5,6 +5,9 @@ import Hero from '@/components/Hero';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
+import { getBlogPostsByCategory } from '@/lib/blog';
+import Link from 'next/link';
+import Image from 'next/image'
 
 interface CategoryPageProps {
   params: {
@@ -89,6 +92,8 @@ export default function CategoryPage({ params, searchParams }: CategoryPageProps
   const paginatedArticles = articles.slice(startIndex, endIndex);
   const totalPages = Math.ceil(articles.length / ARTICLES_PER_PAGE);
 
+  const posts = getBlogPostsByCategory(categorySlug);
+
   if (!categoryMeta) {
     return (
       <Layout>
@@ -109,21 +114,44 @@ export default function CategoryPage({ params, searchParams }: CategoryPageProps
       />
       <section className="container py-12">
         <h2 className="text-3xl font-semibold text-gray-800 mb-8">Makaleler</h2>
-        {paginatedArticles.length > 0 ? (
-           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-             {paginatedArticles.map((article) => (
-               <Card 
-                 key={article.slug} 
-                 title={article.title} 
-                 description={article.description} 
-                 href={article.href} 
-                 tags={article.tags}
-               />
-             ))}
+        {posts.length > 0 ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {posts.map((post) => (
+              <article key={post.slug} className="bg-white rounded-lg shadow-md overflow-hidden">
+                <Link href={`${post.href}`}>
+                  <div className="relative h-48">
+                    <Image
+                      src={post.imageUrl}
+                      alt={post.title}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="text-sm text-gray-500">{post.date ? new Date(post.date).toLocaleDateString() : ''}</span>
+                      <span className="text-sm text-primary-600">{post.category}</span>
+                    </div>
+                    <h2 className="text-xl font-semibold mb-2">{post.title}</h2>
+                    <p className="text-gray-600 mb-4">{post.excerpt}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {post.tags?.map((tag) => (
+                        <span
+                          key={tag}
+                          className="text-xs bg-gray-100 px-2 py-1 rounded"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </Link>
+              </article>
+            ))}
            </div>
-         ) : (
+        ) : (
           <p className="text-xl text-gray-600">Bu kategoride henüz makale bulunmamaktadır.</p>
-         )
+        )
         }
         {totalPages > 1 && (
           <div className="flex justify-center mt-12 space-x-4">
