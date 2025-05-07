@@ -51,7 +51,7 @@ export async function generateSitemapData(): Promise<SitemapEntry[]> {
       url: `${baseUrl}${post.href}`,
       changefreq: 'weekly',
       priority: 0.8,
-      lastmod: post.date,
+      lastmod: post.date ? new Date(post.date).toISOString() : new Date().toISOString(),
     });
   });
 
