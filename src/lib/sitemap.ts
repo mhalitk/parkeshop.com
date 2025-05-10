@@ -21,7 +21,7 @@ export async function generateSitemapData(): Promise<SitemapEntry[]> {
       priority: 1.0,
     },
     {
-      url: `${baseUrl}/about`,
+      url: `${baseUrl}/hakkimizda`,
       changefreq: 'monthly',
       priority: 0.8,
     },

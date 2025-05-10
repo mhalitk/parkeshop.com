@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4">Hızlı Bağlantılar</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/about" className="text-primary-light hover:text-accent-amber">
+                <Link href="/hakkimizda" className="text-primary-light hover:text-accent-amber">
                   Hakkımızda
                 </Link>
               </li>
