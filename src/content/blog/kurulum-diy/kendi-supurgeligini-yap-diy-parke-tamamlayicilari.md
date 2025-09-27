@@ -1,5 +1,5 @@
 ---
-title: Kendi Süpürgeliğini Yap: DIY Parke Tamamlayıcıları
+title: "Kendi Süpürgeliğini Yap: DIY Parke Tamamlayıcıları"
 slug: kendi-supurgeligini-yap-diy-parke-tamamlayicilari
 excerpt: Kendi süpürgeliğinizi yapmanın yollarını öğrenin ve parkenizi tamamlayın. Adım adım DIY süpürgelik yapım yöntemlerini ve püf noktalarını paylaşıyoruz.
 date: 2025-09-23
